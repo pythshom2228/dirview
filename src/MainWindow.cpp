@@ -7,7 +7,6 @@
 #include <QDir>
 #include <QSortFilterProxyModel>
 #include <QWidget>
-#include <QDebug>
 
 MainWindow::MainWindow(const QString& title, size_t width, size_t height, QWidget *parent)
     : QMainWindow(parent)
