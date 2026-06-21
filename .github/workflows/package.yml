@@ -6,6 +6,9 @@ on:
 
 jobs:
   deb:
+    permissions:
+      contents: write
+    
     runs-on: ubuntu-latest
 
     steps:
@@ -20,7 +23,7 @@ jobs:
             build-essential:native
 
       - run: dpkg-buildpackage -us -uc
-      
+
       - name: Collect artifacts
         run: |
           mkdir -p artifacts
