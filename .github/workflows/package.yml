@@ -20,12 +20,14 @@ jobs:
             build-essential:native
 
       - run: dpkg-buildpackage -us -uc
+      
+      - name: Collect artifacts
+        run: |
+          mkdir -p artifacts
+          cp ../*.deb artifacts/
 
-      - run: |
-            mkdir artifacts
-            mv ../*.deb artifacts
-
-      - uses: actions/upload-artifact@v4
+      - name: Attach files to release
+        uses: softprops/action-gh-release@v2
         with:
-          name: deb-package
-          path: artifacts/*.deb
+          files: |
+            artifacts/*.deb
