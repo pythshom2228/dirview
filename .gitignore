@@ -1,0 +1,8 @@
+*.vscode/
+*.stash
+*.o
+*.out
+moc_*.cpp
+moc_*.h
+Makefile
+build/
