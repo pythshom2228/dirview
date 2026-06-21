@@ -3,8 +3,6 @@
 #include <QDirIterator>
 #include <QLocale>
 
-#include <cmath>
-
 FileSystemModel::FileSystemModel(QObject *parent) : QFileSystemModel(parent) 
 {
     setFilter(QDir::AllEntries | QDir::NoDotAndDotDot | QDir::Hidden | QDir::System);
