@@ -28,9 +28,13 @@ jobs:
         run: |
           mkdir -p artifacts
           cp ../*.deb artifacts/
+          cp ../*.changes artifacts/
+          cp ../*.buildinfo artifacts/
 
       - name: Attach files to release
         uses: softprops/action-gh-release@v2
         with:
           files: |
             artifacts/*.deb
+            artifacts/*.changes
+            artifacts/*.buildinfo
