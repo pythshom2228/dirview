@@ -22,20 +22,29 @@ DirView — графическое приложение на Qt5 для прос
 * Qt 5
 * C++17
 
-Для Debian/Ubuntu:
+Для Debian/Astra Linux:
 
 ```bash
 sudo apt install qtbase5-dev cmake build-essential
 ```
 
 ## Сборка
-
+### CMake
 ```bash
 mkdir build
 cd build
 
 cmake ..
 cmake --build .
+```
+
+### QMake
+```bash
+mkdir build
+cd build
+
+qmake ..
+make
 ```
 
 Запуск:
@@ -58,20 +67,6 @@ sudo apt install debhelper devscripts
 dpkg-buildpackage -us -uc
 ```
 
-После завершения сборки будут созданы файлы:
-
-```text
-dirview_<version>_amd64.deb
-dirview_<version>_amd64.changes
-dirview_<version>_amd64.buildinfo
-```
-
-Установка пакета:
-
-```bash
-sudo dpkg -i dirview_<version>_amd64.deb
-```
-
 ## CI/CD
 
 В проекте настроен GitHub Actions.
@@ -81,7 +76,3 @@ sudo dpkg -i dirview_<version>_amd64.deb
 1. выполняется сборка проекта;
 2. создаётся Debian-пакет;
 3. пакет прикрепляется к опубликованному релизу GitHub.
-
-## Лицензия
-
-Проект разработан в учебных целях.
