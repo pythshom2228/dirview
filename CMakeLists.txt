@@ -13,6 +13,7 @@ set(CMAKE_AUTOUIC ON)
 set(SOURCES
     src/main.cpp
     src/MainWindow.cpp
+    src/FileSystemModel.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})

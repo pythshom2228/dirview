@@ -1,0 +1,12 @@
+Source: dirview
+Section: utils
+Priority: optional
+Maintainer: Shamil Magomedov <sh.magomedov05@mail.ru>
+Build-Depends: debhelper-compat (= 13), qtbase5-dev
+Standards-Version: 4.6.2
+
+Package: dirview
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Qt filesystem viewer
+ A simple Qt5 filesystem viewer.

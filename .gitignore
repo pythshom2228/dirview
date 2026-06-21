@@ -6,3 +6,4 @@ moc_*.cpp
 moc_*.h
 Makefile
 build/
+.debhelper/
