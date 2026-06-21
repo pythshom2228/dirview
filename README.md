@@ -52,7 +52,6 @@ make
 ```bash
 ./dirview
 ```
-
 ## Debian-пакет
 
 Для сборки пакета необходимо установить инструменты пакетирования:
@@ -66,6 +65,7 @@ sudo apt install debhelper devscripts
 ```bash
 dpkg-buildpackage -us -uc
 ```
+Все изменения относительно оригинального примера в debian/patch/dirview-features.patch
 
 ## CI/CD
 
