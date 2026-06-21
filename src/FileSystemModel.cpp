@@ -82,8 +82,7 @@ void FileSystemModel::updateFolderSize(const QModelIndex &dirIndex)
 
     m_folderSizes[path] = size;
 
-    QModelIndex sizeIndex =
-        index(dirIndex.row(), SizeColumn, dirIndex.parent());
+    QModelIndex sizeIndex = index(dirIndex.row(), SizeColumn, dirIndex.parent());
 
     emit dataChanged(sizeIndex, sizeIndex);
 }
@@ -92,10 +91,7 @@ int FileSystemModel::calculateFolderSize(const QString &path)
 {
     int size = 0;
 
-    QDirIterator it(
-        path,
-        QDir::Files,
-        QDirIterator::Subdirectories);
+    QDirIterator it(path, QDir::Files, QDirIterator::Subdirectories);
 
     while (it.hasNext())
     {

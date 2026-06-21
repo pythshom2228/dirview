@@ -44,9 +44,8 @@ MainWindow::MainWindow(const QString& title, size_t width, size_t height, QWidge
 
     m_tree->setSortingEnabled(true);
 
-    for (int i = 0; i < m_model->columnCount(); ++i) {
+    for (int i = 0; i < m_model->columnCount(); ++i)
         m_tree->setColumnWidth(i, width / m_model->columnCount());        
-    }
 
     layout->addWidget(m_filter);
     layout->addWidget(m_tree);
