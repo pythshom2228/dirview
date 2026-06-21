@@ -29,6 +29,11 @@ sudo apt install qtbase5-dev cmake build-essential
 ```
 
 ## Сборка
+```bash
+git clone https://github.com/pythshom2228/dirview.git
+cd dirview
+```
+
 ### CMake
 ```bash
 mkdir build
