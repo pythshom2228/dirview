@@ -22,10 +22,10 @@ jobs:
       - run: dpkg-buildpackage -us -uc
 
       - run: |
-            mkdir package \
-            mv ../*.deb package
+            mkdir artifacts
+            mv ../*.deb artifacts
 
       - uses: actions/upload-artifact@v4
         with:
           name: deb-package
-          path: package/*.deb
+          path: artifacts/*.deb
