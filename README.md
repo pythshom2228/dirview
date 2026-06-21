@@ -65,7 +65,7 @@ sudo apt install debhelper devscripts
 ```bash
 dpkg-buildpackage -us -uc
 ```
-Все изменения относительно оригинального примера в debian/patch/dirview-features.patch
+Все изменения относительно оригинального примера в debian/patches/dirview-features.patch
 
 ## CI/CD
 
