@@ -16,7 +16,8 @@ jobs:
           sudo apt install -y \
             debhelper \
             devscripts \
-            qtbase5-dev
+            qtbase5-dev \
+            build-essential:native
 
       - run: dpkg-buildpackage -us -uc
 
